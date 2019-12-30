@@ -1,0 +1,23 @@
+
+name: 'Webhook'
+description: 'Triggers a webhook from a GitHub action'
+inputs:
+  url:
+    description: 'The URL of the webhook to run'
+    required: true
+    default: ''
+  method:
+    description: 'The method to use when pinging the webhook'
+    required: false
+    default: 'GET'
+  headers:
+    description: 'The headers to send during your request'
+    required: false
+    default: null
+  data:
+    description: 'The data to send during your request'
+    required: false
+    default: null
+runs:
+  using: 'node12'
+  main: 'index.js'
