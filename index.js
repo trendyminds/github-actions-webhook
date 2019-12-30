@@ -12,7 +12,7 @@ const OPTS = {
   const res = await fetch(OPTS.url, {
     method: OPTS.method,
     headers: OPTS.headers,
-    data: OPTS.data
+    body: OPTS.data
   });
 
   console.log(`Response: ${res.status} ${res.statusText}`);
